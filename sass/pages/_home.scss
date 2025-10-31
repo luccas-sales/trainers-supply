@@ -1,0 +1,391 @@
+@use '../abstracts/auxiliaries';
+@use '../base/base';
+
+#main {
+  font-family: 'Montserrat', sans-serif;
+  &__apresentation {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+
+    &__texts-and-button {
+      @include auxiliaries.flex-center(column, center, flex-end, 1.5rem);
+      text-align: end;
+
+      h1 {
+        font-size: 6rem;
+        font-weight: 900;
+        color: base.$color-violet-950;
+        width: 60%;
+
+        span {
+          color: base.$color-violet-900;
+          text-shadow: 0 0.5rem 1rem rgba(base.$color-violet-500, 0.15);
+          transition: all 0.3s ease-out;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: base.$color-violet-700;
+      }
+
+      a {
+        z-index: 1000;
+        transition: all 0.3s ease-out;
+        &:link,
+        &:visited {
+          @include auxiliaries.link-and-visited-2(2rem, 1.2rem 4rem);
+        }
+        &:hover {
+          color: base.$color-violet-950;
+          background-color: base.$color-violet-300;
+          box-shadow: 0 0 1rem rgba(base.$color-violet-950, 0.3);
+        }
+        &:active {
+          color: base.$color-violet-300;
+          background-color: base.$color-violet-950;
+        }
+      }
+    }
+
+    &__texts-and-button:has(a:hover) {
+      h1 {
+        color: base.$color-violet-300;
+        text-shadow: 0 0 2px rgba(base.$color-violet-950, 100%),
+          0 0 2px rgba(base.$color-violet-950, 100%),
+          0 0 2px rgba(base.$color-violet-950, 100%),
+          0 0 2px rgba(base.$color-violet-950, 100%),
+          0 0 2px rgba(base.$color-violet-950, 100%);
+      }
+    }
+
+    &__gastly {
+      position: absolute;
+      top: 0;
+      right: -20%;
+    }
+  }
+
+  &__new-arrivals {
+    @include auxiliaries.flex-center(column, center, stretch, 5rem);
+    padding: 5rem 10rem;
+    background-color: base.$color-violet-100;
+    position: relative;
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    &__button-left {
+      all: unset;
+      position: absolute;
+      top: 55%;
+      left: 8rem;
+      text-align: center;
+      font-size: 2rem;
+      padding: 1rem;
+      height: 3rem;
+      width: 3rem;
+      background-color: base.$color-violet-400;
+      color: base.$color-violet-700;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: base.$color-violet-800;
+        color: base.$color-violet-400;
+      }
+    }
+
+    &__products {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 2rem;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+
+      &__product {
+        @include auxiliaries.flex-center(column, center, flex-start, 0);
+
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+
+        &__image {
+          @include auxiliaries.flex-center(column, center, center, 0);
+          height: 30rem;
+          width: 25rem;
+          background-color: rgba(base.$color-violet-700, 0.15);
+          border-radius: 1rem;
+          margin-bottom: 2rem;
+
+          img {
+            image-rendering: pixelated;
+            width: 20rem;
+            transition: all 0.3s ease-out;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    &__button-right {
+      all: unset;
+      position: absolute;
+      top: 55%;
+      right: 8rem;
+      text-align: center;
+      font-size: 2rem;
+      padding: 1rem;
+      height: 3rem;
+      width: 3rem;
+      background-color: base.$color-violet-400;
+      color: base.$color-violet-700;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: base.$color-violet-800;
+        color: base.$color-violet-400;
+      }
+    }
+  }
+
+  &__shop-collection {
+    @include auxiliaries.flex-center(column, center, stretch, 5rem);
+    padding: 5rem 10rem;
+    background-color: base.$color-violet-100;
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    &__products {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      &__product {
+        @include auxiliaries.flex-center(column, center, center, 0);
+        width: 100%;
+        background-color: rgba(base.$color-violet-700, 0.15);
+        border-radius: 1rem;
+        padding: 3rem 5rem;
+        transition: all 0.3s ease-out;
+
+        &__text-and-link {
+          align-self: flex-start;
+
+          h3 {
+            font-size: 3rem;
+          }
+
+          a {
+            text-underline-offset: 0.5rem;
+          }
+        }
+
+        img {
+          image-rendering: pixelated;
+          height: 40rem;
+          margin-bottom: 2rem;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0 0 2rem rgba(base.$color-violet-500, 0.2);
+        }
+      }
+
+      &__aside {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+
+        &__product {
+          @include auxiliaries.flex-center(
+            row-reverse,
+            space-between,
+            center,
+            0
+          );
+          background-color: rgba(base.$color-violet-700, 0.15);
+          border-radius: 1rem;
+          padding: 0rem 5rem;
+          transition: all 0.3s ease-out;
+
+          &__text-and-link {
+            align-self: flex-end;
+            margin-bottom: 3rem;
+
+            h3 {
+              font-size: 3rem;
+            }
+
+            a {
+              text-underline-offset: 0.5rem;
+            }
+          }
+
+          img {
+            image-rendering: pixelated;
+            height: 25rem;
+          }
+
+          &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 2rem rgba(base.$color-violet-500, 0.2);
+          }
+        }
+
+        &__all {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(base.$color-violet-700, 0.15);
+          border-radius: 1rem;
+          padding: 0rem 15rem;
+          transition: all 0.3s ease-out;
+
+          &__text-and-link {
+            a {
+              text-underline-offset: 0.5rem;
+              text-decoration-thickness: 0rem;
+              font-size: 3rem;
+            }
+          }
+
+          img {
+            image-rendering: pixelated;
+            height: 25rem;
+          }
+
+          &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 2rem rgba(base.$color-violet-500, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  &__advantages {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 5rem 10rem;
+    background-color: base.$color-violet-100;
+
+    &_advantage {
+      background-color: base.$color-violet-400;
+      padding: 5rem 3rem;
+      border-radius: 1rem;
+      color: base.$color-violet-900;
+
+      i {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &__promotion {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: base.$color-violet-800;
+
+    &__image {
+      @include auxiliaries.flex-center(row, flex-end, center, 0);
+      background-color: base.$color-violet-500;
+      height: 100%;
+      padding: 2rem 2rem;
+    }
+
+    &__informations {
+      @include auxiliaries.flex-center(column, center, flex-start, 2rem);
+      color: base.$color-violet-300;
+      padding: 2rem 2rem;
+
+      &__text {
+        @include auxiliaries.flex-center(column, center, flex-start, 3rem);
+        p {
+          &:nth-child(1) {
+            font-weight: 900;
+            color: base.$color-violet-100;
+          }
+        }
+
+        h2 {
+          font-size: 3rem;
+        }
+      }
+
+      &__time {
+        @include auxiliaries.flex-center(column, center, flex-start, 1rem);
+        &__clock {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 2rem;
+          width: 40%;
+          & div {
+            @include auxiliaries.flex-center(column, center, center, 0.5rem);
+
+            & div {
+              text-align: center;
+              font-size: 3rem;
+              padding: 0.5rem 1rem;
+              background-color: base.$color-violet-300;
+              color: base.$color-violet-950;
+            }
+
+            & p {
+              text-align: center;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      a {
+        z-index: 1000;
+        transition: all 0.3s ease-out;
+        &:link,
+        &:visited {
+          @include auxiliaries.link-and-visited-3(1.4rem, 1rem 3rem);
+        }
+        &:hover {
+          color: base.$color-violet-300;
+          background-color: base.$color-violet-800;
+          box-shadow: 0 0 1rem rgba(base.$color-violet-300, 0.3);
+        }
+        &:active {
+          color: base.$color-violet-800;
+          background-color: base.$color-violet-300;
+        }
+      }
+    }
+  }
+}

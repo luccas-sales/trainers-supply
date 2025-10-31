@@ -1,0 +1,105 @@
+@use '../abstracts/auxiliaries';
+@use '../base/base';
+
+#footer {
+  @include auxiliaries.flex-center(column, center, center, 0);
+  width: 100%;
+  padding: 5rem 10rem;
+  background-color: base.$color-violet-950;
+  color: base.$color-violet-300;
+
+  &__top-side {
+    @include auxiliaries.flex-center(row, space-between, center, 0);
+    width: 100%;
+    margin-bottom: 3rem;
+
+    &__icon-and-title {
+      @include auxiliaries.flex-center(row, end, center, 0.2rem);
+      cursor: pointer;
+
+      h1 {
+        font-size: 2rem;
+        transition: all 0.3s ease-out;
+      }
+
+      img {
+        image-rendering: pixelated;
+        height: 5rem;
+      }
+
+      &:active {
+        h1 {
+          color: base.$color-violet-500;
+        }
+      }
+    }
+
+    &__nav {
+      @include auxiliaries.flex-center(row, center, center, 4rem);
+
+      a {
+        transition: all 0.3s ease-out;
+        &:link,
+        &:visited {
+          @include auxiliaries.link-and-visited(italic, 300, 1.5rem);
+          color: base.$color-violet-300;
+        }
+        &:active {
+          color: base.$color-violet-500;
+        }
+      }
+    }
+  }
+
+  &__division {
+    width: 100%;
+    border-bottom: solid 0.1rem base.$color-violet-300;
+  }
+
+  &__bottom-side {
+    margin-top: 1rem;
+    @include auxiliaries.flex-center(row, space-between, center, 0);
+    width: 100%;
+
+    &__copyright {
+      @include auxiliaries.flex-center(row, space-between, center, 2rem);
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      a {
+        transition: all 0.3s ease-out;
+        &:link,
+        &:visited {
+          @include auxiliaries.link-and-visited(normal, 900, 1.2rem);
+          color: base.$color-violet-300;
+        }
+        &:active {
+          color: base.$color-violet-500;
+        }
+      }
+    }
+
+    &__social-media {
+      @include auxiliaries.flex-center(row, space-between, center, 3rem);
+
+      a {
+        transition: all 0.3s ease-out;
+
+        i {
+          font-size: 2rem;
+        }
+
+        &:link,
+        &:visited {
+          @include auxiliaries.link-and-visited(normal, 900, 1.2rem);
+          color: base.$color-violet-300;
+        }
+        &:active {
+          color: base.$color-violet-500;
+        }
+      }
+    }
+  }
+}

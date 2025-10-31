@@ -1,0 +1,104 @@
+@use '../abstracts/auxiliaries';
+@use '../base/base';
+
+#header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background-color: base.$color-violet-500;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  padding: 1rem 3rem;
+
+  &__icon-and-title {
+    @include auxiliaries.flex-center(row, end, center, 0.2rem);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    h1 {
+      font-size: 1.8rem;
+      transition: all 0.5s ease-out;
+
+      span {
+        color: base.$color-violet-300;
+        transition: all 0.5s ease-out;
+      }
+    }
+
+    img {
+      image-rendering: pixelated;
+      height: 4rem;
+    }
+
+    &:hover {
+      h1 {
+        color: base.$color-violet-300;
+        transform: scale(1.03);
+
+        span {
+          color: base.$color-violet-950;
+          transform: scale(1.03);
+        }
+      }
+
+      img {
+        animation: 2s ease-in-out pokeboll-rotate;
+      }
+    }
+  }
+
+  &__nav {
+    @include auxiliaries.flex-center(row, center, center, 4rem);
+
+    a {
+      transition: all 0.3s ease-out;
+      &:link,
+      &:visited {
+        @include auxiliaries.link-and-visited(italic, 300, 1.5rem);
+      }
+      &:hover {
+        color: base.$color-violet-300;
+        text-shadow: 0 0 1rem rgba(base.$color-violet-950, 0.5);
+      }
+      &:active {
+        color: base.$color-violet-400;
+      }
+    }
+  }
+
+  &__user-and-bag {
+    @include auxiliaries.flex-center(row, start, center, 1.5rem);
+
+    a {
+      transition: all 0.3s ease-out;
+
+      &:link,
+      &:visited {
+        @include auxiliaries.link-and-visited($size: 2rem);
+      }
+      &:hover {
+        color: base.$color-violet-300;
+        text-shadow: 0 0 1rem rgba(base.$color-violet-950, 0.5);
+      }
+      &:active {
+        color: base.$color-violet-400;
+      }
+    }
+
+    &__bag {
+      position: relative;
+      span {
+        position: absolute;
+        background-color: base.$color-violet-950;
+        color: base.$color-violet-300;
+        font-size: 1rem;
+        border-radius: 100%;
+        text-align: center;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+}

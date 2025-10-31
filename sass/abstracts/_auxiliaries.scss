@@ -1,0 +1,60 @@
+@use '../base/base';
+
+@mixin flex-center($direction, $j-content, $a-items, $gap-size) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $j-content;
+  align-items: $a-items;
+  gap: $gap-size;
+}
+
+@mixin link-and-visited($style: normal, $weight: normal, $size) {
+  text-decoration: none;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin link-and-visited-2($size, $padding) {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: $size;
+  padding: $padding;
+  background-color: base.$color-violet-950;
+  color: base.$color-violet-300;
+  border-radius: 1rem;
+  border: solid 0.1rem base.$color-violet-950;
+}
+
+@mixin link-and-visited-3($size, $padding) {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: $size;
+  padding: $padding;
+  background-color: base.$color-violet-300;
+  color: base.$color-violet-950;
+  border-radius: 1rem;
+  border: solid 0.1rem base.$color-violet-300;
+}
+
+@keyframes pokeboll-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
