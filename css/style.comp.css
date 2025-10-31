@@ -87,6 +87,7 @@ body {
   gap: 4rem;
 }
 #header__nav a {
+  color: #6a1a75;
   transition: all 0.3s ease-out;
 }
 #header__nav a:link, #header__nav a:visited {
@@ -94,6 +95,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-size: 1.5rem;
+  color: #6a1a75;
 }
 #header__nav a:hover {
   color: #ebabfc;
@@ -110,6 +112,7 @@ body {
   gap: 1.5rem;
 }
 #header__user-and-bag a {
+  color: #6a1a75;
   transition: all 0.3s ease-out;
 }
 #header__user-and-bag a:link, #header__user-and-bag a:visited {
@@ -117,6 +120,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
+  color: #6a1a75;
 }
 #header__user-and-bag a:hover {
   color: #ebabfc;

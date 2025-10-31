@@ -53,10 +53,13 @@
     @include auxiliaries.flex-center(row, center, center, 4rem);
 
     a {
+      color: base.$color-violet-900;
       transition: all 0.3s ease-out;
+
       &:link,
       &:visited {
         @include auxiliaries.link-and-visited(italic, 300, 1.5rem);
+        color: base.$color-violet-900;
       }
       &:hover {
         color: base.$color-violet-300;
@@ -72,11 +75,13 @@
     @include auxiliaries.flex-center(row, start, center, 1.5rem);
 
     a {
+      color: base.$color-violet-900;
       transition: all 0.3s ease-out;
 
       &:link,
       &:visited {
         @include auxiliaries.link-and-visited($size: 2rem);
+        color: base.$color-violet-900;
       }
       &:hover {
         color: base.$color-violet-300;
