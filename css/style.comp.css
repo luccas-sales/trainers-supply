@@ -342,6 +342,21 @@ body {
 }
 #main__shop-collection__products__product__text-and-link a {
   text-underline-offset: 0.5rem;
+  color: #6a1a75;
+  transition: all 0.3s ease-out;
+}
+#main__shop-collection__products__product__text-and-link a:link, #main__shop-collection__products__product__text-and-link a:visited {
+  color: #6a1a75;
+  text-underline-offset: 0.5rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+#main__shop-collection__products__product__text-and-link a:hover {
+  color: #991caf;
+}
+#main__shop-collection__products__product__text-and-link a:active {
+  color: #45044e;
 }
 #main__shop-collection__products__product img {
   image-rendering: pixelated;
@@ -378,6 +393,21 @@ body {
 }
 #main__shop-collection__products__aside__product__text-and-link a {
   text-underline-offset: 0.5rem;
+  color: #6a1a75;
+  transition: all 0.3s ease-out;
+}
+#main__shop-collection__products__aside__product__text-and-link a:link, #main__shop-collection__products__aside__product__text-and-link a:visited {
+  color: #6a1a75;
+  text-underline-offset: 0.5rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+#main__shop-collection__products__aside__product__text-and-link a:hover {
+  color: #991caf;
+}
+#main__shop-collection__products__aside__product__text-and-link a:active {
+  color: #45044e;
 }
 #main__shop-collection__products__aside__product img {
   image-rendering: pixelated;
@@ -400,8 +430,22 @@ body {
 }
 #main__shop-collection__products__aside__all__text-and-link a {
   text-underline-offset: 0.5rem;
+  color: #6a1a75;
+  transition: all 0.3s ease-out;
+}
+#main__shop-collection__products__aside__all__text-and-link a:link, #main__shop-collection__products__aside__all__text-and-link a:visited {
+  color: #6a1a75;
+  text-underline-offset: 0.5rem;
   text-decoration-thickness: 0rem;
+  font-style: normal;
+  font-weight: normal;
   font-size: 3rem;
+}
+#main__shop-collection__products__aside__all__text-and-link a:hover {
+  color: #991caf;
+}
+#main__shop-collection__products__aside__all__text-and-link a:active {
+  color: #45044e;
 }
 #main__shop-collection__products__aside__all img {
   image-rendering: pixelated;

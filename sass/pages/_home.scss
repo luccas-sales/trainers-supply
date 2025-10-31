@@ -198,6 +198,23 @@
 
           a {
             text-underline-offset: 0.5rem;
+            color: base.$color-violet-900;
+            transition: all 0.3s ease-out;
+
+            &:link,
+            &:visited {
+              color: base.$color-violet-900;
+              text-underline-offset: 0.5rem;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 1.6rem;
+            }
+            &:hover {
+              color: base.$color-violet-700;
+            }
+            &:active {
+              color: base.$color-violet-950;
+            }
           }
         }
 
@@ -241,6 +258,23 @@
 
             a {
               text-underline-offset: 0.5rem;
+              color: base.$color-violet-900;
+              transition: all 0.3s ease-out;
+
+              &:link,
+              &:visited {
+                color: base.$color-violet-900;
+                text-underline-offset: 0.5rem;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1.6rem;
+              }
+              &:hover {
+                color: base.$color-violet-700;
+              }
+              &:active {
+                color: base.$color-violet-950;
+              }
             }
           }
 
@@ -269,8 +303,24 @@
           &__text-and-link {
             a {
               text-underline-offset: 0.5rem;
-              text-decoration-thickness: 0rem;
-              font-size: 3rem;
+              color: base.$color-violet-900;
+              transition: all 0.3s ease-out;
+
+              &:link,
+              &:visited {
+                color: base.$color-violet-900;
+                text-underline-offset: 0.5rem;
+                text-decoration-thickness: 0rem;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 3rem;
+              }
+              &:hover {
+                color: base.$color-violet-700;
+              }
+              &:active {
+                color: base.$color-violet-950;
+              }
             }
           }
 
