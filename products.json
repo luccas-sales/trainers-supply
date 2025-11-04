@@ -1,0 +1,243 @@
+[
+  {
+    "categorie": "Pokeboll",
+    "name": "Beast Boll",
+    "price": 299.0,
+    "image": "src/ball/beast.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Dive Boll",
+    "price": 150.0,
+    "image": "src/ball/dive.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Dream Boll",
+    "price": 220.0,
+    "image": "src/ball/dream.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Great Boll",
+    "price": 200.0,
+    "image": "src/ball/great.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Heal Boll",
+    "price": 180.0,
+    "image": "src/ball/heal.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Heavy Boll",
+    "price": 250.0,
+    "image": "src/ball/heavy.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Love Boll",
+    "price": 190.0,
+    "image": "src/ball/love.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Lure Boll",
+    "price": 175.0,
+    "image": "src/ball/lure.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Master Boll",
+    "price": 1200.0,
+    "image": "src/ball/master.png"
+  },
+  {
+    "categorie": "Pokeboll",
+    "name": "Premier Boll",
+    "price": 210.0,
+    "image": "src/ball/premier.png"
+  },
+
+  {
+    "categorie": "Medicine",
+    "name": "Burn Heal",
+    "price": 250.0,
+    "image": "./src/medicine/burn-heal.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Calcium",
+    "price": 9800.0,
+    "image": "./src/medicine/calcium.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Hyper Potion",
+    "price": 1200.0,
+    "image": "./src/medicine/hyper-potion.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Ice Heal",
+    "price": 250.0,
+    "image": "./src/medicine/ice-heal.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Max Potion",
+    "price": 2500.0,
+    "image": "./src/medicine/max-potion.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Max Revive",
+    "price": 4000.0,
+    "image": "./src/medicine/max-revive.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Potion",
+    "price": 300.0,
+    "image": "./src/medicine/potion.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Rare Candy",
+    "price": 4800.0,
+    "image": "./src/medicine/rare-candy.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Soda Pop",
+    "price": 300.0,
+    "image": "./src/medicine/soda-pop.png"
+  },
+  {
+    "categorie": "Medicine",
+    "name": "Sweet Heart",
+    "price": 1000.0,
+    "image": "./src/medicine/sweet-heart.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Black",
+    "price": 150.0,
+    "image": "./src/candy/black.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Blue",
+    "price": 150.0,
+    "image": "./src/candy/blue.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "M",
+    "price": 150.0,
+    "image": "./src/candy/m.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Mighty",
+    "price": 150.0,
+    "image": "./src/candy/mighty.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Mighty XL",
+    "price": 150.0,
+    "image": "./src/candy/mighty-xl.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Pink",
+    "price": 150.0,
+    "image": "./src/candy/pink.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "S",
+    "price": 150.0,
+    "image": "./src/candy/s.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Smart XL",
+    "price": 150.0,
+    "image": "./src/candy/smart-xl.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "Tough L",
+    "price": 150.0,
+    "image": "./src/candy/tough-l.png"
+  },
+  {
+    "categorie": "Candy",
+    "name": "XL",
+    "price": 150.0,
+    "image": "./src/candy/xl.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Bluk",
+    "price": 80.0,
+    "image": "./src/berry/bluk.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Cheri",
+    "price": 80.0,
+    "image": "./src/berry/cheri.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Golden Pinap",
+    "price": 80.0,
+    "image": "./src/berry/golden-pinap.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Golden Razz",
+    "price": 80.0,
+    "image": "./src/berry/golden-razz.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Leppa",
+    "price": 80.0,
+    "image": "./src/berry/leppa.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Nanab",
+    "price": 80.0,
+    "image": "./src/berry/nanab.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Oran",
+    "price": 80.0,
+    "image": "./src/berry/oran.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Razz",
+    "price": 80.0,
+    "image": "./src/berry/razz.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Razz Gen3",
+    "price": 80.0,
+    "image": "./src/berry/razz-gen3.png"
+  },
+  {
+    "categorie": "Berry",
+    "name": "Silver Pinap",
+    "price": 80.0,
+    "image": "./src/berry/silver-pinap.png"
+  }
+]

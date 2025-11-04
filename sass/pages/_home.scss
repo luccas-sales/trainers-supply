@@ -34,13 +34,20 @@
         margin-top: 100%;
       }
 
+      @include auxiliaries.respond(extra-small) {
+        margin-top: 35rem;
+      }
+
       h1 {
         font-size: 6rem;
+        line-height: 6rem;
         font-weight: 900;
         color: base.$color-violet-950;
+        transition: all 0.3s ease-out;
 
         @include auxiliaries.respond(large) {
           font-size: 4.5rem;
+          line-height: 5rem;
         }
 
         @include auxiliaries.respond(extra-small) {
@@ -108,19 +115,18 @@
 
       @include auxiliaries.respond(large) {
         right: -25%;
-        scale: 0.8;
+        transform: scale(0.8);
       }
 
       @include auxiliaries.respond(medium) {
-        top: -10%;
+        height: 60%;
+        top: 0%;
         right: 0%;
-        scale: 0.6;
       }
 
-      @include auxiliaries.respond(extra-small) {
-        top: -15%;
-        right: 0%;
-        scale: 0.6;
+      @include auxiliaries.respond(small) {
+        top: -1%;
+        transform: scale(0.7);
       }
     }
   }
@@ -129,7 +135,7 @@
     @include auxiliaries.flex-center(column, center, stretch, 5rem);
     width: 100%;
     max-width: 1440px;
-    padding: 4rem 4rem;
+    padding: 4rem;
     background-color: base.$color-violet-100;
     position: relative;
 
@@ -195,25 +201,16 @@
 
         &__image {
           @include auxiliaries.flex-center(column, center, center, 0);
-          height: 30rem;
-          width: 25rem;
+          height: 25rem;
+          width: 20rem;
           background-color: rgba(base.$color-violet-700, 0.15);
           border-radius: 1rem;
           margin-bottom: 2rem;
 
-          @include auxiliaries.respond(medium) {
-            height: 25rem;
-            width: 20rem;
-          }
-
           img {
             image-rendering: pixelated;
-            width: 20rem;
+            width: 15rem;
             transition: all 0.3s ease-out;
-
-            @include auxiliaries.respond(medium) {
-              width: 15rem;
-            }
           }
         }
 
@@ -253,7 +250,7 @@
     @include auxiliaries.flex-center(column, center, stretch, 5rem);
     width: 100%;
     max-width: 1440px;
-    padding: 4rem 4rem;
+    padding: 4rem;
     background-color: base.$color-violet-100;
 
     h2 {
@@ -525,7 +522,7 @@
     gap: 2rem;
     width: 100%;
     max-width: 1440px;
-    padding: 4rem 4rem;
+    padding: 4rem;
     background-color: base.$color-violet-100;
 
     @include auxiliaries.respond(large) {

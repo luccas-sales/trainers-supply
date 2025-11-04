@@ -1,0 +1,284 @@
+@use '../abstracts/auxiliaries';
+@use '../base/base';
+
+#main {
+  font-family: 'Montserrat', sans-serif;
+  background-color: base.$color-violet-100;
+  @include auxiliaries.flex-center(column, center, center, 5rem);
+  width: 100%;
+
+  &__description-and-filters {
+    @include auxiliaries.flex-center(column, space-between, center, 3rem);
+    width: 100%;
+    max-width: 1440px;
+    padding: 4rem;
+
+    &__description {
+      @include auxiliaries.flex-center(column, center, center, 2rem);
+      text-align: center;
+      padding: 10% 0 5% 0;
+      background-color: base.$color-violet-200;
+      width: 100%;
+
+      &__page-identification {
+        p {
+          color: rgba(base.$color-violet-950, 0.35);
+
+          i {
+            font-size: 1.2rem;
+          }
+
+          span {
+            color: base.$color-violet-950;
+          }
+        }
+      }
+
+      &__title-and-description {
+        line-height: 6rem;
+        h1 {
+          font-size: 5rem;
+        }
+
+        p {
+          font-size: 1.8rem;
+          color: rgba(base.$color-violet-950, 0.7);
+        }
+      }
+    }
+
+    &__description-temporary {
+      @include auxiliaries.flex-center(column, center, center, 2rem);
+      text-align: center;
+      padding: 10% 0 5% 0;
+      background-color: base.$color-violet-200;
+      width: 100%;
+
+      &__page-identification {
+        p {
+          height: 2.5rem;
+          width: 15rem;
+          margin-bottom: 1rem;
+          background-image: linear-gradient(
+            90deg,
+            rgba(69, 4, 78, 0.15) 0%,
+            rgba(69, 4, 78, 0.25) 50%,
+            rgba(69, 4, 78, 0.15) 100%
+          );
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite linear;
+        }
+      }
+
+      &__title-and-description {
+        @include auxiliaries.flex-center(column, center, center, 1rem);
+        h1 {
+          height: 5rem;
+          width: 40rem;
+          margin-bottom: 1rem;
+          background-image: linear-gradient(
+            90deg,
+            rgba(69, 4, 78, 0.15) 0%,
+            rgba(69, 4, 78, 0.25) 50%,
+            rgba(69, 4, 78, 0.15) 100%
+          );
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite linear;
+        }
+
+        p {
+          height: 2rem;
+          width: 50rem;
+          margin-bottom: 1rem;
+          background-image: linear-gradient(
+            90deg,
+            rgba(69, 4, 78, 0.15) 0%,
+            rgba(69, 4, 78, 0.25) 50%,
+            rgba(69, 4, 78, 0.15) 100%
+          );
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite linear;
+        }
+      }
+    }
+
+    &__filters {
+      @include auxiliaries.flex-center(row, space-between, center, 2rem);
+      width: 100%;
+
+      @include auxiliaries.respond(medium) {
+        @include auxiliaries.flex-center(column, space-between, center, 2rem);
+      }
+
+      &__left-side {
+        @include auxiliaries.flex-center(row, center, center, 2rem);
+
+        @include auxiliaries.respond(medium) {
+          @include auxiliaries.flex-center(column, space-between, center, 2rem);
+          width: 100%;
+        }
+
+        &__categories,
+        &__price {
+          @include auxiliaries.flex-center(column, center, flex-start, 1rem);
+          @include auxiliaries.respond(medium) {
+            width: 100%;
+          }
+
+          label {
+            font-size: 1.4rem;
+            color: rgba(base.$color-violet-950, 0.6);
+          }
+
+          select {
+            all: unset;
+            appearance: menulist;
+            border-radius: 1rem;
+            border: solid 0.2rem rgba(base.$color-violet-950, 0.5);
+            padding: 1rem 15rem 1rem 1rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+
+            @include auxiliaries.respond(medium) {
+              width: 100%;
+              padding: 1rem 0rem 1rem 0rem;
+            }
+          }
+        }
+      }
+
+      &__right-side {
+        @include auxiliaries.flex-center(row, center, center, 2rem);
+
+        select {
+          all: unset;
+          appearance: menulist;
+          border-radius: 1rem;
+          font-weight: 600;
+          font-size: 1.4rem;
+        }
+
+        &__layout {
+          @include auxiliaries.flex-center(row, center, center, 0);
+
+          i {
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(base.$color-violet-300, 0.5);
+
+            &:nth-of-type(2) {
+              background-color: base.$color-violet-300;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1440px;
+    padding: 4rem;
+
+    &__product {
+      @include auxiliaries.flex-center(column, center, flex-start, 0);
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      &__image {
+        @include auxiliaries.flex-center(column, center, center, 0);
+        min-height: 30rem;
+        height: 30rem;
+        min-width: 25rem;
+        width: 100%;
+        background-color: rgba(base.$color-violet-700, 0.15);
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+
+        img {
+          image-rendering: pixelated;
+          width: 20rem;
+          transition: all 0.3s ease-out;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__product-temporary {
+      @include auxiliaries.flex-center(column, center, flex-start, 0);
+
+      h3 {
+        height: 1.6rem;
+        width: 80%;
+        margin-bottom: 1rem;
+        background-image: linear-gradient(
+          90deg,
+          rgba(69, 4, 78, 0.15) 0%,
+          rgba(69, 4, 78, 0.25) 50%,
+          rgba(69, 4, 78, 0.15) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite linear;
+      }
+
+      p {
+        height: 1.4rem;
+        width: 40%;
+        background-image: linear-gradient(
+          90deg,
+          rgba(69, 4, 78, 0.15) 0%,
+          rgba(69, 4, 78, 0.25) 50%,
+          rgba(69, 4, 78, 0.15) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite linear;
+      }
+
+      &__image {
+        @include auxiliaries.flex-center(column, center, center, 0);
+        height: 30rem;
+        width: 100%;
+        background-color: rgba(base.$color-violet-700, 0.15);
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+
+        &__image-temporary {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem;
+          background-image: linear-gradient(
+            90deg,
+            rgba(69, 4, 78, 0.15) 0%,
+            rgba(69, 4, 78, 0.25) 50%,
+            rgba(69, 4, 78, 0.15) 100%
+          );
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite linear;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
