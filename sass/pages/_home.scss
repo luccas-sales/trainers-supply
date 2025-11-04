@@ -125,8 +125,7 @@
       }
 
       @include auxiliaries.respond(small) {
-        top: -1%;
-        transform: scale(0.7);
+        top: 5%;
       }
     }
   }

@@ -4,7 +4,7 @@
 #main {
   font-family: 'Montserrat', sans-serif;
   background-color: base.$color-violet-100;
-  @include auxiliaries.flex-center(column, center, center, 5rem);
+  @include auxiliaries.flex-center(column, center, center, 0);
   width: 100%;
 
   &__description-and-filters {
@@ -16,7 +16,7 @@
     &__description {
       @include auxiliaries.flex-center(column, center, center, 2rem);
       text-align: center;
-      padding: 10% 0 5% 0;
+      padding: 10% 5%;
       background-color: base.$color-violet-200;
       width: 100%;
 
@@ -35,14 +35,26 @@
       }
 
       &__title-and-description {
-        line-height: 6rem;
+        @include auxiliaries.flex-center(column, center, center, 2rem);
         h1 {
           font-size: 5rem;
+
+          @include auxiliaries.respond(medium) {
+            font-size: 4rem;
+          }
+
+          @include auxiliaries.respond(small) {
+            font-size: 3rem;
+          }
         }
 
         p {
           font-size: 1.8rem;
           color: rgba(base.$color-violet-950, 0.7);
+
+          @include auxiliaries.respond(medium) {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -67,6 +79,11 @@
           );
           background-size: 200% 100%;
           animation: shimmer 1.5s infinite linear;
+
+          @include auxiliaries.respond(small) {
+            height: 2rem;
+            width: 10rem;
+          }
         }
       }
 
@@ -84,6 +101,11 @@
           );
           background-size: 200% 100%;
           animation: shimmer 1.5s infinite linear;
+
+          @include auxiliaries.respond(small) {
+            height: 4rem;
+            width: 20rem;
+          }
         }
 
         p {
@@ -98,6 +120,11 @@
           );
           background-size: 200% 100%;
           animation: shimmer 1.5s infinite linear;
+
+          @include auxiliaries.respond(small) {
+            height: 4rem;
+            width: 30rem;
+          }
         }
       }
     }
@@ -160,6 +187,10 @@
 
         &__layout {
           @include auxiliaries.flex-center(row, center, center, 0);
+
+          @include auxiliaries.respond(small) {
+            display: none;
+          }
 
           i {
             font-size: 2rem;
