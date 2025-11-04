@@ -8,23 +8,45 @@
   background-color: base.$color-violet-950;
   color: base.$color-violet-300;
 
+  @include auxiliaries.respond(extra-small) {
+    padding: 5rem 5rem;
+  }
+
   &__top-side {
     @include auxiliaries.flex-center(row, space-between, center, 0);
     width: 100%;
     margin-bottom: 3rem;
 
+    @include auxiliaries.respond(medium) {
+      @include auxiliaries.flex-center(column, space-between, center, 2rem);
+      margin-bottom: 2rem;
+    }
+
     &__icon-and-title {
       @include auxiliaries.flex-center(row, end, center, 0.2rem);
       cursor: pointer;
 
+      @include auxiliaries.respond(medium) {
+        border-bottom: solid 0.1rem base.$color-violet-300;
+      }
+
       h1 {
         font-size: 2rem;
         transition: all 0.3s ease-out;
+        padding: 1rem 1rem 1rem 0;
+
+        @include auxiliaries.respond(small) {
+          font-size: 1.5rem;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+        }
       }
 
       img {
         image-rendering: pixelated;
         height: 5rem;
+        @include auxiliaries.respond(small) {
+          height: 3rem;
+        }
       }
 
       &:active {
@@ -37,12 +59,20 @@
     &__nav {
       @include auxiliaries.flex-center(row, center, center, 4rem);
 
+      @include auxiliaries.respond(small) {
+        @include auxiliaries.flex-center(row, center, center, 2rem);
+      }
+
       a {
         transition: all 0.3s ease-out;
         &:link,
         &:visited {
           @include auxiliaries.link-and-visited(italic, 300, 1.5rem);
           color: base.$color-violet-300;
+
+          @include auxiliaries.respond(small) {
+            @include auxiliaries.link-and-visited(italic, 300, 1.2rem);
+          }
         }
         &:active {
           color: base.$color-violet-500;
@@ -61,22 +91,48 @@
     @include auxiliaries.flex-center(row, space-between, center, 0);
     width: 100%;
 
+    @include auxiliaries.respond(medium) {
+      @include auxiliaries.flex-center(column, space-between, center, 0);
+    }
+
     &__copyright {
       @include auxiliaries.flex-center(row, space-between, center, 2rem);
 
-      p {
-        font-size: 1.2rem;
+      @include auxiliaries.respond(medium) {
+        @include auxiliaries.flex-center(column, space-between, center, 2rem);
+        margin-bottom: 2rem;
       }
 
-      a {
-        transition: all 0.3s ease-out;
-        &:link,
-        &:visited {
-          @include auxiliaries.link-and-visited(normal, 900, 1.2rem);
-          color: base.$color-violet-300;
+      @include auxiliaries.respond(small) {
+        @include auxiliaries.flex-center(column, space-between, center, 1.5rem);
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.2rem;
+        text-align: center;
+
+        @include auxiliaries.respond(small) {
+          font-size: 1rem;
         }
-        &:active {
-          color: base.$color-violet-500;
+      }
+
+      &__term-and-privacy {
+        @include auxiliaries.flex-center(row, space-between, center, 2rem);
+
+        a {
+          transition: all 0.3s ease-out;
+          &:link,
+          &:visited {
+            @include auxiliaries.link-and-visited(normal, 900, 1.2rem);
+            color: base.$color-violet-300;
+
+            @include auxiliaries.respond(small) {
+              @include auxiliaries.link-and-visited(normal, 900, 1rem);
+            }
+          }
+          &:active {
+            color: base.$color-violet-500;
+          }
         }
       }
     }
@@ -89,6 +145,10 @@
 
         i {
           font-size: 2rem;
+
+          @include auxiliaries.respond(small) {
+            font-size: 1.4rem;
+          }
         }
 
         &:link,

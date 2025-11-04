@@ -10,16 +10,35 @@
   grid-auto-flow: column;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
-  padding: 1rem 3rem;
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: 0rem 0.5rem 1rem rgba(base.$color-violet-950, 0.15);
+
+  @include auxiliaries.respond(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include auxiliaries.respond(extra-small) {
+    padding: 1rem 3rem 1rem 2rem;
+  }
 
   &__icon-and-title {
     @include auxiliaries.flex-center(row, end, center, 0.2rem);
     cursor: pointer;
     transition: all 0.5s ease-out;
 
+    @include auxiliaries.respond(medium) {
+      @include auxiliaries.flex-center(row, start, center, 0.2rem);
+    }
+
     h1 {
       font-size: 1.8rem;
       transition: all 0.5s ease-out;
+      padding: 1rem 1rem 1rem 0;
+      white-space: nowrap;
+
+      @include auxiliaries.respond(extra-small) {
+        font-size: 1.5rem;
+      }
 
       span {
         color: base.$color-violet-300;
@@ -30,6 +49,10 @@
     img {
       image-rendering: pixelated;
       height: 4rem;
+
+      @include auxiliaries.respond(extra-small) {
+        height: 3rem;
+      }
     }
 
     &:hover {
@@ -52,6 +75,10 @@
   &__nav {
     @include auxiliaries.flex-center(row, center, center, 4rem);
 
+    @include auxiliaries.respond(medium) {
+      display: none;
+    }
+
     a {
       color: base.$color-violet-900;
       transition: all 0.3s ease-out;
@@ -73,6 +100,10 @@
 
   &__user-and-bag {
     @include auxiliaries.flex-center(row, start, center, 1.5rem);
+
+    @include auxiliaries.respond(medium) {
+      @include auxiliaries.flex-center(row, end, center, 1.5rem);
+    }
 
     a {
       color: base.$color-violet-900;
@@ -103,6 +134,147 @@
         text-align: center;
         height: 1.5rem;
         width: 1.5rem;
+      }
+    }
+  }
+
+  &__aside {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: base.$color-violet-100;
+    width: 95%;
+    height: 100dvh;
+    padding: 3rem;
+
+    &__top-side {
+      @include auxiliaries.flex-center(column, center, center, 1rem);
+      width: 100%;
+      &__head {
+        @include auxiliaries.flex-center(row, space-between, center, 0);
+        width: 100%;
+
+        &__icon-and-title {
+          @include auxiliaries.flex-center(row, end, center, 0.2rem);
+          cursor: pointer;
+
+          h1 {
+            font-size: 1.8rem;
+            transition: all 0.3s ease-out;
+            padding: 0.5rem 0.5rem 0.5rem 0;
+          }
+
+          img {
+            image-rendering: pixelated;
+            height: 4rem;
+          }
+
+          &:active {
+            h1 {
+              color: base.$color-violet-500;
+            }
+          }
+        }
+
+        i {
+          cursor: pointer;
+          font-size: 1.8rem;
+        }
+      }
+
+      &__search-and-options {
+        @include auxiliaries.flex-center(column, center, center, 2rem);
+        width: 100%;
+
+        &__search {
+          @include auxiliaries.flex-center(row, flex-start, center, 2rem);
+          width: 100%;
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          border: solid 0.1rem rgba(base.$color-violet-950, 0.5);
+
+          input {
+            all: unset;
+          }
+        }
+
+        &__options {
+          @include auxiliaries.flex-center(column, center, flex-start, 2rem);
+          width: 100%;
+
+          a {
+            color: base.$color-violet-900;
+            border-bottom: solid 0.1rem rgba(base.$color-violet-950, 0.15);
+            padding: 1rem 0rem;
+            width: 100%;
+            transition: all 0.3s ease-out;
+
+            &:link,
+            &:visited {
+              @include auxiliaries.link-and-visited(italic, 600, 1.4rem);
+              color: base.$color-violet-900;
+            }
+            &:active {
+              color: base.$color-violet-400;
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom-side {
+      @include auxiliaries.flex-center(column, center, center, 2rem);
+      width: 100%;
+      &__cart-and-wishlist {
+        @include auxiliaries.flex-center(column, center, flex-start, 2rem);
+        width: 100%;
+
+        a {
+          @include auxiliaries.flex-center(row, space-between, center, 2rem);
+          color: base.$color-violet-900;
+          border-bottom: solid 0.1rem rgba(base.$color-violet-950, 0.15);
+          padding: 1rem 0rem;
+          width: 100%;
+          transition: all 0.3s ease-out;
+
+          i {
+            font-size: 2rem;
+          }
+
+          &:link,
+          &:visited {
+            @include auxiliaries.link-and-visited(normal, 600, 1.4rem);
+            color: base.$color-violet-900;
+          }
+          &:active {
+            color: base.$color-violet-400;
+          }
+        }
+      }
+
+      &__sign-in {
+        width: 100%;
+        a {
+          @include auxiliaries.flex-center(row, center, center, 0);
+          transition: all 0.3s ease-out;
+
+          &:link,
+          &:visited {
+            @include auxiliaries.link-and-visited-2(1.8rem, 1rem 4rem);
+          }
+          &:hover {
+            color: base.$color-violet-950;
+            background-color: base.$color-violet-300;
+            box-shadow: 0 0 1rem rgba(base.$color-violet-950, 0.3);
+          }
+          &:active {
+            color: base.$color-violet-300;
+            background-color: base.$color-violet-950;
+          }
+        }
       }
     }
   }

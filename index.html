@@ -33,12 +33,56 @@
             <a href="#"><i class="bi bi-person-circle"></i></a>
             <div id="header__user-and-bag__bag"><a href="#"><i class="bi bi-backpack3-fill"></i><span>0</span></a></div>
         </div>
+
+        <aside id="header__aside">
+            <div id="header__aside__top-side">
+                <div id="header__aside__top-side__head">
+                    <div id="header__aside__top-side__head__icon-and-title">
+                        <img src="./src/ball/master.png" alt="">
+                        <h1>TRA<span>I</span>NERS SUPPLY</h1>
+                    </div>
+                    <i id="header__aside__top-side__head__close-button" class="bi bi-x-lg"></i>
+                </div>
+
+                <div id="header__aside__top-side__search-and-options">
+                    <div id="header__aside__top-side__search-and-options__search">
+                        <label for="search"><i class="bi bi-search"></i></label>
+                        <input type="text" name="search" placeholder="Search">
+                    </div>
+                    <div id="header__aside__top-side__search-and-options__options">
+                        <a href="#">POKEBOLL</a>
+                        <a href="#">MEDICINE</a>
+                        <a href="#">CANDY</a>
+                        <a href="#">BERRY</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="header__aside__bottom-side">
+                <div id="header__aside__bottom-side__cart-and-wishlist">
+                    <a href="#">
+                        <p>Cart</p>
+                        <i class="bi bi-backpack3-fill"></i>
+                    </a>
+                    <a href="#">
+                        <p>Wishlist</p>
+                        <i class="bi bi-star"></i>
+                    </a>
+                </div>
+
+                <div id="header__aside__bottom-side__sign-in">
+                    <a href="#">Sign In</a href="#">
+                </div>
+            </div>
+
+        </aside>
     </header>
 
     <main id="main">
         <section id="main__apresentation">
             <div id="main__apresentation__texts-and-button">
-                <h1>Equip yourself <span>for greatness</span></h1>
+                <h1>Equip yourself</h1>
+                <h1><span>for greatness</span></h1>
 
                 <div id="main__apresentation__texts-and-button__paragraphs">
                     <p>Premium supplies for the modern Pokémon trainer.</p>
@@ -133,29 +177,30 @@
         <section id="main__shop-collection">
             <h2>Shop Collection</h2>
             <div id="main__shop-collection__products">
-                <div id="main__shop-collection__products__product">
-                    <img src="./src/pokeboll.png" style="transform: translateY(-30px);" alt="Pokeboll">
-                    <div id="main__shop-collection__products__product__text-and-link">
+                <div id="main__shop-collection__products__product__pokeboll">
+                    <img src="./src/pokeboll.png" alt="Pokeboll">
+                    <div id="main__shop-collection__products__product__pokeboll__text-and-link">
                         <h3>Pokeboll</h3>
                         <a href="#">Collection &rarr;</a>
                     </div>
                 </div>
 
-                <div id="main__shop-collection__products__aside">
-                    <div id="main__shop-collection__products__aside__product">
-                        <img src="src/medicine.png" style="transform: translateY(-30px);" alt="Medicine">
-                        <div id="main__shop-collection__products__aside__product__text-and-link">
-                            <h3>Medicine</h3>
-                            <a href="#">Collection &rarr;</a>
-                        </div>
-                    </div>
-                    <div id="main__shop-collection__products__aside__all">
-                        <img src="./src/others.png" style="transform: translateY(-30px);" alt="Dream Ball">
-                        <div id="main__shop-collection__products__aside__all__text-and-link">
-                            <a href="#">...</a>
-                        </div>
+
+                <div id="main__shop-collection__products__product__medicine">
+                    <img src="src/medicine.png" alt="Medicine">
+                    <div id="main__shop-collection__products__product__medicine__text-and-link">
+                        <h3>Medicine</h3>
+                        <a href="#">Collection &rarr;</a>
                     </div>
                 </div>
+
+                <div id="main__shop-collection__products__product__others">
+                    <div id="main__shop-collection__products__product__others__image-and-link">
+                        <img src="./src/others.png" alt="Dream Ball">
+                        <a href="#">...</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -244,8 +289,10 @@
         <div id="footer__bottom-side">
             <div id="footer__bottom-side__copyright">
                 <p>Copyright © 2025 Luccas D' Sales. All rights reserved</p>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Term of Use</a>
+                <div id="footer__bottom-side__copyright__term-and-privacy">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Term of Use</a>
+                </div>
             </div>
             <div id="footer__bottom-side__social-media">
                 <a href="#"><i class="bi bi-whatsapp"></i></a>
@@ -256,6 +303,7 @@
     </footer>
 
     <script src="scripts/navegationArriavals.js"></script>
+    <script src="scripts/asideNav.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.90/build/spline-viewer.js"></script>
 </body>
 

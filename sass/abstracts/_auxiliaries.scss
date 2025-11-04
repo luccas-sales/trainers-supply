@@ -8,6 +8,32 @@
   gap: $gap-size;
 }
 
+@mixin respond($tamanho) {
+  @if $tamanho == extra-small {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @if $tamanho == small {
+    @media (max-width: 640px) {
+      @content;
+    }
+  }
+
+  @if $tamanho == medium {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $tamanho == large {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 @mixin link-and-visited($style: normal, $weight: normal, $size) {
   text-decoration: none;
   font-style: $style;
