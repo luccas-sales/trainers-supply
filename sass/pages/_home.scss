@@ -55,8 +55,15 @@
         }
 
         @include auxiliaries.respond(medium) {
+          color: base.$color-violet-900;
+          text-shadow: 0 0 0.5rem rgba(base.$color-violet-950, 0.3);
           font-size: 2.5rem;
           line-height: 2rem;
+        }
+
+        @include auxiliaries.respond(small) {
+          color: base.$color-violet-800;
+          text-shadow: 0 0 0.5rem rgba(base.$color-violet-950, 0.3);
         }
 
         span {
@@ -72,7 +79,11 @@
 
           @include auxiliaries.respond(medium) {
             font-size: 2.4rem;
-            -webkit-text-stroke: 0.1rem base.$color-violet-900;
+            -webkit-text-stroke: 0.12rem base.$color-violet-800;
+          }
+
+          @include auxiliaries.respond(small) {
+            -webkit-text-stroke: 0.12rem base.$color-violet-700;
           }
         }
       }
@@ -81,12 +92,19 @@
         font-size: 1.5rem;
         font-weight: 600;
         color: base.$color-violet-200;
+
         text-shadow: 0 0 0.5rem rgba(base.$color-violet-950, 0.5);
         @include auxiliaries.respond(large) {
           font-size: 1.2rem;
         }
 
         @include auxiliaries.respond(medium) {
+          color: base.$color-violet-100;
+          font-size: 0.8rem;
+        }
+
+        @include auxiliaries.respond(small) {
+          color: base.$color-violet-50;
           font-size: 0.8rem;
         }
       }
@@ -102,7 +120,6 @@
 
       img {
         height: 50rem;
-
         @include auxiliaries.respond(large) {
           height: 40rem;
         }
@@ -112,7 +129,7 @@
     &__haunter {
       display: none;
       z-index: 1;
-      transform: translate3d(0, calc(var(--scrollTop) / 3), 0);
+      transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
 
       @include auxiliaries.respond(medium) {
         display: block;
@@ -124,7 +141,8 @@
 
     &__gengar {
       display: none;
-      margin-bottom: 35%;
+      margin-left: 30%;
+      margin-bottom: 60%;
       z-index: 3;
       transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
 
@@ -133,7 +151,7 @@
       }
 
       img {
-        width: 20rem;
+        width: 15rem;
       }
     }
 
