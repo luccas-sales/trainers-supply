@@ -16,11 +16,12 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+    gap: 2rem;
     height: 100dvh;
     width: 100%;
     background-color: base.$color-violet-300;
 
-    @include auxiliaries.respond(medium) {
+    @include auxiliaries.respond(small) {
       grid-auto-flow: row;
       grid-template-columns: none;
     }
@@ -29,13 +30,8 @@
       @include auxiliaries.flex-center(column, center, flex-end, 1.5rem);
       text-align: end;
 
-      @include auxiliaries.respond(medium) {
+      @include auxiliaries.respond(small) {
         @include auxiliaries.flex-center(column, center, center, 1.5rem);
-        margin-top: 100%;
-      }
-
-      @include auxiliaries.respond(extra-small) {
-        margin-top: 35rem;
       }
 
       h1 {
@@ -50,7 +46,7 @@
           line-height: 5rem;
         }
 
-        @include auxiliaries.respond(extra-small) {
+        @include auxiliaries.respond(medium) {
           font-size: 3.5rem;
           line-height: 3.5rem;
         }
@@ -69,7 +65,7 @@
         @include auxiliaries.respond(large) {
           font-size: 1.2rem;
         }
-        @include auxiliaries.respond(extra-small) {
+        @include auxiliaries.respond(medium) {
           font-size: 1rem;
         }
       }
@@ -83,6 +79,10 @@
 
           @include auxiliaries.respond(large) {
             @include auxiliaries.link-and-visited-2(1.4rem, 1.2rem 4rem);
+          }
+
+          @include auxiliaries.respond(medium) {
+            @include auxiliaries.link-and-visited-2(1.2rem, 1rem 3rem);
           }
         }
         &:hover {
@@ -119,13 +119,31 @@
       }
 
       @include auxiliaries.respond(medium) {
-        height: 60%;
-        top: 0%;
-        right: 0%;
+        display: none;
       }
+    }
+
+    &__haunter {
+      display: none;
+      @include auxiliaries.respond(medium) {
+        display: block;
+      }
+      @include auxiliaries.respond(small) {
+        display: none;
+      }
+    }
+
+    &__gengar {
+      display: none;
+      position: relative;
 
       @include auxiliaries.respond(small) {
-        top: 5%;
+        display: block;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
       }
     }
   }

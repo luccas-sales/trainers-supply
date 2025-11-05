@@ -8,18 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'header__aside__top-side__head__close-button'
   );
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
     iconAndText.addEventListener('click', () => {
       asideNav.style.display = 'flex';
       asideNav.classList.add('aside-animation-in');
-    });
-
-    iconAndTextAside.addEventListener('click', () => {
-      window.location.href = './index.html';
-    });
-  } else {
-    iconAndText.addEventListener('click', () => {
-      window.location.href = './index.html';
     });
   }
 

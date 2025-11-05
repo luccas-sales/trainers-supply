@@ -24,16 +24,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     Medicine: 'Discover miraculous healing items to save your toughest battle',
     Candy: "Discover the legendary sweets that elevate your Pokémon's power",
     Berry: 'Discover Berries with unique effects that can turn any battle',
+    All: 'Discover vital items with unique effects that can turn any battle',
   };
 
   function layout(categorie, json) {
     const productsDivs = new DocumentFragment();
     const descriptionCategorie = descriptionCategories[categorie];
 
-    json.forEach((product) => {
-      if (product.categorie === categorie) {
+    if (categorie === 'All') {
+      json.forEach((product) => {
         const productDivElement = document.createElement('div');
-        productDivElement.classList.add('main__products__product');
+        productDivElement.setAttribute('id', 'main__products__product');
         productDivElement.innerHTML = `
         <div id="main__products__product__image">
         <img src="${product.image}" alt="${product.name}">
@@ -43,8 +44,24 @@ document.addEventListener('DOMContentLoaded', async function () {
         `;
 
         productsDivs.appendChild(productDivElement);
-      }
-    });
+      });
+    } else {
+      json.forEach((product) => {
+        if (product.categorie === categorie) {
+          const productDivElement = document.createElement('div');
+          productDivElement.setAttribute('id', 'main__products__product');
+          productDivElement.innerHTML = `
+        <div id="main__products__product__image">
+        <img src="${product.image}" alt="${product.name}">
+        </div>
+        <h3>${product.categorie} - ${product.name}</h3>
+        <p>$${product.price}</p>
+        `;
+
+          productsDivs.appendChild(productDivElement);
+        }
+      });
+    }
 
     setTimeout(() => {
       products.innerHTML = ' ';
@@ -77,5 +94,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   if (categorie === 'berry') {
     layout('Berry', productsJson);
+  }
+
+  if (categorie === 'all') {
+    layout('All', productsJson);
   }
 });

@@ -9,12 +9,13 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+  gap: 10rem;
   padding: 1rem 3rem 1rem 3rem;
   box-shadow: 0rem 0.5rem 1rem rgba(base.$color-violet-950, 0.15);
 
-  @include auxiliaries.respond(medium) {
+  @include auxiliaries.respond(large) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
   }
 
   @include auxiliaries.respond(extra-small) {
@@ -26,7 +27,7 @@
     cursor: pointer;
     transition: all 0.5s ease-out;
 
-    @include auxiliaries.respond(medium) {
+    @include auxiliaries.respond(large) {
       @include auxiliaries.flex-center(row, start, center, 0.2rem);
     }
 
@@ -75,7 +76,7 @@
   &__nav {
     @include auxiliaries.flex-center(row, center, center, 4rem);
 
-    @include auxiliaries.respond(medium) {
+    @include auxiliaries.respond(large) {
       display: none;
     }
 
@@ -101,7 +102,7 @@
   &__user-and-bag {
     @include auxiliaries.flex-center(row, start, center, 1.5rem);
 
-    @include auxiliaries.respond(medium) {
+    @include auxiliaries.respond(large) {
       @include auxiliaries.flex-center(row, end, center, 1.5rem);
     }
 
