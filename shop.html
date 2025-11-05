@@ -16,41 +16,183 @@
 </head>
 
 <body>
-    <header id="header">
-        <div id="header__icon-and-title">
-            <img src="./src/ball/master.png" alt="">
-            <h1>TRA<span>I</span>NERS SUPPLY</h1>
-        </div>
-
-        <nav id="header__nav">
-            <a href="./index.html" id="home">HOME</a>
-            <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
-            <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
-            <a href="./shop.html?category=candy" id="candy">CANDY</a>
-            <a href="./shop.html?category=berry" id="berry">BERRY</a>
-        </nav>
-
-        <div id="header__user-and-bag">
-            <a href="#"><i class="bi bi-person-circle"></i></a>
-            <div id="header__user-and-bag__bag"><a href="#"><i class="bi bi-backpack3-fill"></i><span>0</span></a></div>
-        </div>
-
-        <aside id="header__aside">
-            <div id="header__aside__top-side">
-                <div id="header__aside__top-side__head">
-                    <div id="header__aside__top-side__head__icon-and-title">
-                        <img src="./src/ball/master.png" alt="">
-                        <h1>TRA<span>I</span>NERS SUPPLY</h1>
-                    </div>
-                    <i id="header__aside__top-side__head__close-button" class="bi bi-x-lg"></i>
+    <div class="wrapper">
+        <div class="content">
+            <header id="header">
+                <div id="header__icon-and-title">
+                    <img src="./src/ball/master.png" alt="">
+                    <h1>TRA<span>I</span>NERS SUPPLY</h1>
                 </div>
-
-                <div id="header__aside__top-side__search-and-options">
-                    <div id="header__aside__top-side__search-and-options__search">
-                        <label for="search"><i class="bi bi-search"></i></label>
-                        <input type="text" name="search" placeholder="Search">
+                <nav id="header__nav">
+                    <a href="./index.html" id="home">HOME</a>
+                    <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
+                    <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
+                    <a href="./shop.html?category=candy" id="candy">CANDY</a>
+                    <a href="./shop.html?category=berry" id="berry">BERRY</a>
+                </nav>
+                <div id="header__user-and-bag">
+                    <a href="#"><i class="bi bi-person-circle"></i></a>
+                    <div id="header__user-and-bag__bag"><a href="#"><i
+                                class="bi bi-backpack3-fill"></i><span>0</span></a>
                     </div>
-                    <div id="header__aside__top-side__search-and-options__options">
+                </div>
+                <aside id="header__aside">
+                    <div id="header__aside__top-side">
+                        <div id="header__aside__top-side__head">
+                            <div id="header__aside__top-side__head__icon-and-title">
+                                <img src="./src/ball/master.png" alt="">
+                                <h1>TRA<span>I</span>NERS SUPPLY</h1>
+                            </div>
+                            <i id="header__aside__top-side__head__close-button" class="bi bi-x-lg"></i>
+                        </div>
+                        <div id="header__aside__top-side__search-and-options">
+                            <div id="header__aside__top-side__search-and-options__search">
+                                <label for="search"><i class="bi bi-search"></i></label>
+                                <input type="text" name="search" placeholder="Search">
+                            </div>
+                            <div id="header__aside__top-side__search-and-options__options">
+                                <a href="./index.html" id="home">HOME</a>
+                                <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
+                                <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
+                                <a href="./shop.html?category=candy" id="candy">CANDY</a>
+                                <a href="./shop.html?category=berry" id="berry">BERRY</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="header__aside__bottom-side">
+                        <div id="header__aside__bottom-side__cart-and-wishlist">
+                            <a href="#">
+                                <p>Cart</p>
+                                <i class="bi bi-backpack3-fill"></i>
+                            </a>
+                            <a href="#">
+                                <p>Wishlist</p>
+                                <i class="bi bi-star"></i>
+                            </a>
+                        </div>
+                        <div id="header__aside__bottom-side__sign-in">
+                            <a href="#">Sign In</a href="#">
+                        </div>
+                    </div>
+                </aside>
+            </header>
+            <main id="main">
+                <section id="main__description-and-filters">
+                    <div id="main__description-and-filters__description">
+                        <div id="main__description-and-filters__description-temporary__page-identification">
+                            <p></p>
+                        </div>
+                        <div id="main__description-and-filters__description-temporary__title-and-description">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div id="main__description-and-filters__filters">
+                        <div id="main__description-and-filters__filters__left-side">
+                            <div id="main__description-and-filters__filters__left-side__categories">
+                                <label for="categories">CATEGORIES</label>
+                                <select name="categories" disabled>
+                                    <option value="categories">All Products</option>
+                                </select>
+                            </div>
+                            <div id="main__description-and-filters__filters__left-side__price">
+                                <label for="price">PRICE</label>
+                                <select name="price" disabled>
+                                    <option value="all-price">All Price</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="main__description-and-filters__filters__right-side">
+                            <select name="filter" disabled>
+                                <option value="sort-by">sort by</option>
+                            </select>
+                            <div id="main__description-and-filters__filters__right-side__layout">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                                <i class="bi bi-grid-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="main__products">
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div id="main__products__product-temporary">
+                        <div id="main__products__product-temporary__image">
+                            <div id="main__products__product-temporary__image__image-temporary"></div>
+                        </div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </section>
+            </main>
+            <footer id="footer">
+                <div id="footer__top-side">
+                    <div id="footer__top-side__icon-and-title">
+                        <img src="./src/ball/master.png" alt="">
+                        <h1>TRAINERS SUPPLY</h1>
+                    </div>
+                    <div id="footer__top-side__nav">
                         <a href="./index.html" id="home">HOME</a>
                         <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
                         <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
@@ -58,181 +200,30 @@
                         <a href="./shop.html?category=berry" id="berry">BERRY</a>
                     </div>
                 </div>
-            </div>
-
-            <div id="header__aside__bottom-side">
-                <div id="header__aside__bottom-side__cart-and-wishlist">
-                    <a href="#">
-                        <p>Cart</p>
-                        <i class="bi bi-backpack3-fill"></i>
-                    </a>
-                    <a href="#">
-                        <p>Wishlist</p>
-                        <i class="bi bi-star"></i>
-                    </a>
-                </div>
-
-                <div id="header__aside__bottom-side__sign-in">
-                    <a href="#">Sign In</a href="#">
-                </div>
-            </div>
-
-        </aside>
-    </header>
-
-    <main id="main">
-        <section id="main__description-and-filters">
-            <div id="main__description-and-filters__description">
-                <div id="main__description-and-filters__description-temporary__page-identification">
-                    <p></p>
-                </div>
-
-                <div id="main__description-and-filters__description-temporary__title-and-description">
-                    <h1></h1>
-                    <p></p>
-                </div>
-            </div>
-
-            <div id="main__description-and-filters__filters">
-                <div id="main__description-and-filters__filters__left-side">
-                    <div id="main__description-and-filters__filters__left-side__categories">
-                        <label for="categories">CATEGORIES</label>
-                        <select name="categories" disabled>
-                            <option value="categories">All Products</option>
-                        </select>
+                <div id="footer__division"></div>
+                <div id="footer__bottom-side">
+                    <div id="footer__bottom-side__copyright">
+                        <p>Copyright © 2025 Luccas D' Sales. All rights reserved</p>
+                        <div id="footer__bottom-side__copyright__term-and-privacy">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Term of Use</a>
+                        </div>
                     </div>
-
-                    <div id="main__description-and-filters__filters__left-side__price">
-                        <label for="price">PRICE</label>
-                        <select name="price" disabled>
-                            <option value="all-price">All Price</option>
-                        </select>
+                    <div id="footer__bottom-side__social-media">
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
                     </div>
                 </div>
-
-                <div id="main__description-and-filters__filters__right-side">
-                    <select name="filter" disabled>
-                        <option value="sort-by">sort by</option>
-                    </select>
-
-                    <div id="main__description-and-filters__filters__right-side__layout">
-                        <i class="bi bi-grid-3x3-gap-fill"></i>
-                        <i class="bi bi-grid-fill"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="main__products">
-
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div id="main__products__product-temporary">
-                <div id="main__products__product-temporary__image">
-                    <div id="main__products__product-temporary__image__image-temporary"></div>
-                </div>
-                <h3></h3>
-                <p></p>
-            </div>
-
-        </section>
-    </main>
-
-    <footer id="footer">
-        <div id="footer__top-side">
-            <div id="footer__top-side__icon-and-title">
-                <img src="./src/ball/master.png" alt="">
-                <h1>TRAINERS SUPPLY</h1>
-            </div>
-
-            <div id="footer__top-side__nav">
-                <a href="./index.html" id="home">HOME</a>
-                <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
-                <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
-                <a href="./shop.html?category=candy" id="candy">CANDY</a>
-                <a href="./shop.html?category=berry" id="berry">BERRY</a>
-            </div>
+            </footer>
         </div>
+    </div>
 
-        <div id="footer__division"></div>
+    <script src="./libs/gsap/gsap.min.js" defer></script>
+    <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
 
-        <div id="footer__bottom-side">
-            <div id="footer__bottom-side__copyright">
-                <p>Copyright © 2025 Luccas D' Sales. All rights reserved</p>
-                <div id="footer__bottom-side__copyright__term-and-privacy">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Term of Use</a>
-                </div>
-            </div>
-            <div id="footer__bottom-side__social-media">
-                <a href="#"><i class="bi bi-whatsapp"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-tiktok"></i></a>
-            </div>
-        </div>
-    </footer>
-
+    <script src="scripts/parallax.js" defer></script>
     <script src="scripts/shopSelection.js"></script>
     <script src="scripts/header.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.90/build/spline-viewer.js"></script>
