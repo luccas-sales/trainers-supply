@@ -24,7 +24,7 @@
 
     &__icon-and-title {
       @include auxiliaries.flex-center(row, end, center, 0.2rem);
-      cursor: pointer;
+      cursor: default;
 
       @include auxiliaries.respond(medium) {
         border-bottom: solid 0.1rem base.$color-violet-300;
@@ -48,12 +48,6 @@
           height: 3rem;
         }
       }
-
-      &:active {
-        h1 {
-          color: base.$color-violet-500;
-        }
-      }
     }
 
     &__nav {
@@ -61,6 +55,10 @@
 
       @include auxiliaries.respond(small) {
         @include auxiliaries.flex-center(row, center, center, 2rem);
+      }
+
+      @include auxiliaries.respond(extra-small) {
+        @include auxiliaries.flex-center(row, center, center, 1rem);
       }
 
       a {

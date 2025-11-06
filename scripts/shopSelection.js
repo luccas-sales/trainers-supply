@@ -69,14 +69,20 @@ document.addEventListener('DOMContentLoaded', async function () {
       description.innerHTML = ' ';
       description.innerHTML = `
     <div id="main__description-and-filters__description__page-identification">
-                    <p>Home <i class="bi bi-chevron-right"></i> <span>${categorie}</span></p>
+                    <p>Home <i class="bi bi-chevron-right"></i> <span>${
+                      categorie === 'All' ? 'All Items' : categorie
+                    }</span></p>
                 </div>
 
                 <div id="main__description-and-filters__description__title-and-description">
-                    <h1>${categorie} Page</h1>
+                    <h1>${
+                      categorie === 'All' ? 'All Items' : categorie
+                    } Page</h1>
                     <p>${descriptionCategorie}</p>
                 </div>
     `;
+
+      ScrollTrigger.refresh();
     }, 1000);
   }
 

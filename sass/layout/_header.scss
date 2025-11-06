@@ -24,7 +24,7 @@
 
   &__icon-and-title {
     @include auxiliaries.flex-center(row, end, center, 0.2rem);
-    cursor: pointer;
+    cursor: default;
     transition: all 0.5s ease-out;
 
     @include auxiliaries.respond(large) {

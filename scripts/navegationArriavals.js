@@ -12,4 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   rightBtn.addEventListener('click', () => {
     productsContainer.scrollLeft += productsContainer.clientWidth;
   });
+
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  ScrollSmoother.create({
+    wrapper: '.wrapper',
+    content: '.content',
+  });
 });
