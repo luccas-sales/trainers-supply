@@ -70,6 +70,7 @@
           }
 
           @include auxiliaries.respond(medium) {
+            -webkit-text-stroke: 0.15rem base.$color-violet-900;
             font-size: 2.4rem;
           }
         }
@@ -199,11 +200,7 @@
     &__carousel {
       display: flex;
       gap: 2rem;
-      overflow-x: auto;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      overflow-x: hidden;
 
       &:hover {
         & #main__new-arrivals__carousel__products {

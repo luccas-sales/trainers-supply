@@ -1,0 +1,334 @@
+@use '../abstracts/auxiliaries';
+@use '../base/base';
+
+#mobile-options {
+  display: none;
+  height: 100dvh;
+  width: 100%;
+
+  &__content {
+    z-index: 99999999;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: base.$color-violet-100;
+    width: 70%;
+    height: 100dvh;
+    padding: 3rem;
+
+    @include auxiliaries.respond(small) {
+      width: 85%;
+    }
+
+    &__top-side {
+      @include auxiliaries.flex-center(column, center, center, 1rem);
+      width: 100%;
+      &__head {
+        @include auxiliaries.flex-center(row, space-between, center, 0);
+        width: 100%;
+
+        &__icon-and-title {
+          @include auxiliaries.flex-center(row, end, center, 0.2rem);
+          cursor: pointer;
+
+          h1 {
+            font-size: 1.8rem;
+            transition: all 0.3s ease-out;
+            padding: 0.5rem 0.5rem 0.5rem 0;
+          }
+
+          img {
+            image-rendering: pixelated;
+            height: 4rem;
+          }
+
+          &:active {
+            h1 {
+              color: base.$color-violet-500;
+            }
+          }
+        }
+
+        i {
+          cursor: pointer;
+          font-size: 1.8rem;
+        }
+      }
+
+      &__search-and-options {
+        @include auxiliaries.flex-center(column, center, center, 2rem);
+        width: 100%;
+
+        &__search {
+          @include auxiliaries.flex-center(row, flex-start, center, 2rem);
+          width: 100%;
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          border: solid 0.1rem rgba(base.$color-violet-950, 0.5);
+
+          input {
+            all: unset;
+          }
+        }
+
+        &__options {
+          @include auxiliaries.flex-center(column, center, flex-start, 2rem);
+          width: 100%;
+
+          a {
+            color: base.$color-violet-900;
+            border-bottom: solid 0.1rem rgba(base.$color-violet-950, 0.15);
+            padding: 1rem 0rem;
+            width: 100%;
+            transition: all 0.3s ease-out;
+
+            &:link,
+            &:visited {
+              @include auxiliaries.link-and-visited(italic, 600, 1.4rem);
+              color: base.$color-violet-900;
+            }
+            &:active {
+              color: base.$color-violet-400;
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom-side {
+      @include auxiliaries.flex-center(column, center, center, 2rem);
+      width: 100%;
+      &__shopping-cart-and-wishlist {
+        @include auxiliaries.flex-center(column, center, flex-start, 2rem);
+        width: 100%;
+
+        a {
+          @include auxiliaries.flex-center(row, space-between, center, 2rem);
+          color: base.$color-violet-900;
+          border-bottom: solid 0.1rem rgba(base.$color-violet-950, 0.15);
+          padding: 1rem 0rem;
+          width: 100%;
+          transition: all 0.3s ease-out;
+
+          i {
+            font-size: 2rem;
+          }
+
+          &:link,
+          &:visited {
+            @include auxiliaries.link-and-visited(normal, 600, 1.4rem);
+            color: base.$color-violet-900;
+          }
+          &:active {
+            color: base.$color-violet-400;
+          }
+        }
+      }
+
+      &__sign-in {
+        width: 100%;
+        a {
+          @include auxiliaries.flex-center(row, center, center, 0);
+          transition: all 0.3s ease-out;
+
+          &:link,
+          &:visited {
+            @include auxiliaries.link-and-visited-2(1.8rem, 1rem 4rem);
+          }
+          &:hover {
+            color: base.$color-violet-950;
+            background-color: base.$color-violet-300;
+            box-shadow: 0 0 1rem rgba(base.$color-violet-950, 0.3);
+          }
+          &:active {
+            color: base.$color-violet-300;
+            background-color: base.$color-violet-950;
+          }
+        }
+      }
+    }
+  }
+
+  &__background {
+    display: none;
+    z-index: 999998;
+    background-color: rgba(base.$color-violet-950, 0.5);
+    position: fixed;
+    right: 0;
+    height: 100dvh;
+    min-width: 100%;
+  }
+}
+
+#shopping-cart {
+  display: flex;
+  height: 100dvh;
+  width: 100%;
+
+  &__content {
+    z-index: 99999999;
+    position: fixed;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: base.$color-violet-100;
+    width: 35rem;
+    height: 100dvh;
+    padding: 3rem;
+
+    &__top-side {
+      @include auxiliaries.flex-center(row, space-between, center, 0);
+      width: 100%;
+      border-bottom: solid 0.1rem rgba(base.$color-violet-950, 0.15);
+
+      &__title {
+        @include auxiliaries.flex-center(row, end, center, 0.2rem);
+        cursor: pointer;
+
+        h1 {
+          font-size: 1.8rem;
+          transition: all 0.3s ease-out;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        img {
+          image-rendering: pixelated;
+          height: 4rem;
+        }
+
+        &:active {
+          h1 {
+            color: base.$color-violet-500;
+          }
+        }
+      }
+
+      i {
+        cursor: pointer;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__mid-side {
+      @include auxiliaries.flex-center(column, flex-start, center, 2rem);
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+
+      p {
+        color: rgba(base.$color-violet-950, 0.5);
+      }
+
+      &__product {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 25% 1fr;
+        gap: 1rem;
+        width: 100%;
+        padding-right: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        &__details {
+          @include auxiliaries.flex-center(column, center, flex-start, 1rem);
+
+          &__quanty-and-value {
+            @include auxiliaries.flex-center(row, space-between, center, 0rem);
+            width: 100%;
+
+            &__quanty {
+              @include auxiliaries.flex-center(
+                row,
+                space-between,
+                center,
+                0rem
+              );
+              border: solid 0.1rem rgba(base.$color-violet-950, 0.3);
+              border-radius: 0.5rem;
+              padding: 0.5rem;
+
+              input {
+                all: unset;
+                width: 5rem;
+                text-align: center;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                  appearance: none;
+                  margin: 0;
+                }
+              }
+
+              button {
+                all: unset;
+                padding: 0rem 0.5rem;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom-side {
+      @include auxiliaries.flex-center(column, center, center, 0rem);
+      width: 100%;
+      border-top: solid 0.1rem rgba(base.$color-violet-950, 0.3);
+
+      &__total-value {
+        @include auxiliaries.flex-center(row, space-between, center, 2rem);
+        width: 100%;
+        padding: 1rem 0.5rem;
+
+        p {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+      }
+
+      &__buttons {
+        @include auxiliaries.flex-center(column, center, center, 1rem);
+        border-top: solid 0.1rem rgba(base.$color-violet-950, 0.3);
+        padding-top: 1rem;
+        width: 100%;
+        a {
+          @include auxiliaries.flex-center(row, center, center, 0);
+          transition: all 0.3s ease-out;
+          width: 100%;
+
+          &:link,
+          &:visited {
+            @include auxiliaries.link-and-visited-2(1.2rem, 1rem 4rem);
+          }
+          &:hover {
+            color: base.$color-violet-950;
+            background-color: base.$color-violet-200;
+            box-shadow: 0 0 1rem rgba(base.$color-violet-950, 0.3);
+          }
+          &:active {
+            color: base.$color-violet-300;
+            background-color: base.$color-violet-950;
+          }
+        }
+      }
+    }
+  }
+
+  &__background {
+    display: none;
+    z-index: 999998;
+    background-color: rgba(base.$color-violet-950, 0.5);
+    position: fixed;
+    right: 0;
+    height: 100dvh;
+    min-width: 100%;
+  }
+}

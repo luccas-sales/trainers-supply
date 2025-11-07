@@ -17,70 +17,190 @@
 </head>
 
 <body>
+    <header id="header">
+        <div id="header__icon-and-title">
+            <img src="./src/ball/master.png" alt="">
+            <h1>TRA<span>I</span>NERS SUPPLY</h1>
+        </div>
+
+        <nav id="header__nav">
+            <a href="./index.html" id="home">HOME</a>
+            <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
+            <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
+            <a href="./shop.html?category=candy" id="candy">CANDY</a>
+            <a href="./shop.html?category=berry" id="berry">BERRY</a>
+        </nav>
+
+        <div id="header__user-and-bag">
+            <a href="#"><i class="bi bi-person-circle"></i></a>
+
+            <div id="header__user-and-bag__bag"><a href="#"><i class="bi bi-backpack3-fill"></i><span>0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <aside id="mobile-options">
+        <div id="mobile-options__content">
+            <div id="mobile-options__content__top-side">
+                <div id="mobile-options__content__top-side__head">
+                    <div id="mobile-options__content__top-side__head__icon-and-title">
+                        <img src="./src/ball/master.png" alt="">
+                        <h1>TRA<span>I</span>NERS SUPPLY</h1>
+                    </div>
+                    <i id="mobile-options__content__top-side__head__close-button" class="bi bi-x-lg"></i>
+                </div>
+                <div id="mobile-options__content__top-side__search-and-options">
+                    <div id="mobile-options__content__top-side__search-and-options__search">
+                        <label for="search"><i class="bi bi-search"></i></label>
+                        <input type="text" name="search" placeholder="Search">
+                    </div>
+                    <div id="mobile-options__content__top-side__search-and-options__options">
+                        <a href="./index.html" id="home">HOME</a>
+                        <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
+                        <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
+                        <a href="./shop.html?category=candy" id="candy">CANDY</a>
+                        <a href="./shop.html?category=berry" id="berry">BERRY</a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-options__content__bottom-side">
+                <div id="mobile-options__content__bottom-side__shopping-cart-and-wishlist">
+                    <a href="#">
+                        <p>Cart</p>
+                        <i class="bi bi-backpack3-fill"></i>
+                    </a>
+                    <a href="#">
+                        <p>Wishlist</p>
+                        <i class="bi bi-star"></i>
+                    </a>
+                </div>
+                <div id="mobile-options__content__bottom-side__sign-in">
+                    <a href="#">Sign In</a href="#">
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-options__background"></div>
+    </aside>
+
+    <aside id="shopping-cart">
+        <div id="shopping-cart__content">
+            <div id="shopping-cart__content__top-side">
+                <i id="shopping-cart__content__top-side__close-button" class="bi bi-x-lg"></i>
+                <div id="shopping-cart__content__top-side__title">
+                    <h1>Shopping Cart</h1>
+                </div>
+            </div>
+
+            <div id="shopping-cart__content__mid-side">
+                <div id="shopping-cart__content__mid-side__product">
+                    <img src="src/ball/love.png" alt="">
+                    <div id="shopping-cart__content__mid-side__product__details">
+                        <p>Pokeboll - Love Ball</p>
+
+                        <div id="shopping-cart__content__mid-side__product__details__quanty-and-value">
+
+                            <div id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__remove-button">-</button>
+                                <input type="number" value="1" inputmode="numeric" autocomplete="off">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__add-button">+</button>
+                            </div>
+
+                            <p id="shopping-cart__content__mid-side__product__details__quanty-and-value__value">
+                                $190,00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shopping-cart__content__mid-side__product">
+                    <img src="src/medicine/hyper-potion.png" alt="">
+                    <div id="shopping-cart__content__mid-side__product__details">
+                        <p>Medicine - Hyper Potion</p>
+
+                        <div id="shopping-cart__content__mid-side__product__details__quanty-and-value">
+
+                            <div id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__remove-button">-</button>
+                                <input type="number" value="1" inputmode="numeric" autocomplete="off">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__add-button">+</button>
+                            </div>
+
+                            <p id="shopping-cart__content__mid-side__product__details__quanty-and-value__value">
+                                $1200,00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shopping-cart__content__mid-side__product">
+                    <img src="src/candy/pink.png" alt="">
+                    <div id="shopping-cart__content__mid-side__product__details">
+                        <p>Candy - Pink</p>
+
+                        <div id="shopping-cart__content__mid-side__product__details__quanty-and-value">
+
+                            <div id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__remove-button">-</button>
+                                <input type="number" value="1" inputmode="numeric" autocomplete="off">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__add-button">+</button>
+                            </div>
+
+                            <p id="shopping-cart__content__mid-side__product__details__quanty-and-value__value">
+                                $150,00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shopping-cart__content__mid-side__product">
+                    <img src="src/berry/nanab.png" alt="">
+                    <div id="shopping-cart__content__mid-side__product__details">
+                        <p>Berry - Nanab</p>
+
+                        <div id="shopping-cart__content__mid-side__product__details__quanty-and-value">
+
+                            <div id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__remove-button">-</button>
+                                <input type="number" value="1" inputmode="numeric" autocomplete="off">
+                                <button
+                                    id="shopping-cart__content__mid-side__product__details__quanty-and-value__quanty__add-button">+</button>
+                            </div>
+
+                            <p id="shopping-cart__content__mid-side__product__details__quanty-and-value__value">
+                                $80,00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="shopping-cart__content__bottom-side">
+
+                <div id="shopping-cart__content__bottom-side__total-value">
+                    <p>Subtotal:</p>
+                    <p id="shopping-cart__content__bottom-side__total-value__value">$1620,00</p>
+                </div>
+
+                <div id="shopping-cart__content__bottom-side__buttons">
+                    <a href="#">VER CARRINHO</a href="#">
+                    <a href="#">FINALIZAÇÃO DE COMPRA</a href="#">
+                </div>
+            </div>
+        </div>
+
+        <div id="shopping-cart__background"></div>
+    </aside>
+
     <div class="wrapper">
         <div class="content">
-            <header id="header">
-                <div id="header__icon-and-title">
-                    <img src="./src/ball/master.png" alt="">
-                    <h1>TRA<span>I</span>NERS SUPPLY</h1>
-                </div>
-
-                <nav id="header__nav">
-                    <a href="./index.html" id="home">HOME</a>
-                    <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
-                    <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
-                    <a href="./shop.html?category=candy" id="candy">CANDY</a>
-                    <a href="./shop.html?category=berry" id="berry">BERRY</a>
-                </nav>
-
-                <div id="header__user-and-bag">
-                    <a href="#"><i class="bi bi-person-circle"></i></a>
-                    <div id="header__user-and-bag__bag"><a href="#"><i
-                                class="bi bi-backpack3-fill"></i><span>0</span></a>
-                    </div>
-                </div>
-
-                <aside id="header__aside">
-                    <div id="header__aside__top-side">
-                        <div id="header__aside__top-side__head">
-                            <div id="header__aside__top-side__head__icon-and-title">
-                                <img src="./src/ball/master.png" alt="">
-                                <h1>TRA<span>I</span>NERS SUPPLY</h1>
-                            </div>
-                            <i id="header__aside__top-side__head__close-button" class="bi bi-x-lg"></i>
-                        </div>
-                        <div id="header__aside__top-side__search-and-options">
-                            <div id="header__aside__top-side__search-and-options__search">
-                                <label for="search"><i class="bi bi-search"></i></label>
-                                <input type="text" name="search" placeholder="Search">
-                            </div>
-                            <div id="header__aside__top-side__search-and-options__options">
-                                <a href="./index.html" id="home">HOME</a>
-                                <a href="./shop.html?category=pokeboll" id="pokeboll">POKEBOLL</a>
-                                <a href="./shop.html?category=medicine" id="medicine">MEDICINE</a>
-                                <a href="./shop.html?category=candy" id="candy">CANDY</a>
-                                <a href="./shop.html?category=berry" id="berry">BERRY</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="header__aside__bottom-side">
-                        <div id="header__aside__bottom-side__cart-and-wishlist">
-                            <a href="#">
-                                <p>Cart</p>
-                                <i class="bi bi-backpack3-fill"></i>
-                            </a>
-                            <a href="#">
-                                <p>Wishlist</p>
-                                <i class="bi bi-star"></i>
-                            </a>
-                        </div>
-                        <div id="header__aside__bottom-side__sign-in">
-                            <a href="#">Sign In</a href="#">
-                        </div>
-                    </div>
-                </aside>
-            </header>
-
             <main id="main">
                 <section id="main__apresentation">
                     <div id="main__apresentation__texts">
@@ -385,7 +505,6 @@
         </div>
     </div>
 
-
     <script src="./scripts/observerTransitions.js" defer></script>
 
     <script src="./libs/gsap/gsap.min.js" defer></script>
@@ -393,9 +512,8 @@
     <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
 
     <script src="scripts/parallax.js" defer></script>
-    <script src="scripts/shopSelection.js" defer></script>
-    <script src="scripts/header.js" defer></script>
-    <script src="scripts/navegationArriavals.js" defer></script>
+    <script src="scripts/asideShoppingCart.js" defer></script>
+    <script src="scripts/mobileOptions.js" defer></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.90/build/spline-viewer.js" defer></script>
 </body>
 

@@ -85,7 +85,7 @@
   }
 }
 
-@keyframes aside-nav-translate {
+@keyframes mobile-aside-animation-in {
   0% {
     transform: translateX(-100%);
   }
@@ -95,7 +95,7 @@
   }
 }
 
-@keyframes aside-nav-translate-out {
+@keyframes mobile-aside-animation-out {
   0% {
     transform: translateX(0%);
   }
@@ -105,12 +105,68 @@
   }
 }
 
-.aside-animation-in {
-  animation: 1s ease-out aside-nav-translate;
+.mobile-aside-animation-in {
+  animation: 1s ease-out mobile-aside-animation-in;
 }
 
-.aside-animation-out {
-  animation: 1s ease-in aside-nav-translate-out;
+.mobile-aside-animation-out {
+  animation: 1s ease-in mobile-aside-animation-out;
+}
+
+@keyframes cart-aside-animation-in {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes cart-aside-animation-out {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.cart-aside-animation-in {
+  animation: 1s ease-out cart-aside-animation-in;
+}
+
+.cart-aside-animation-out {
+  animation: 1s ease-in cart-aside-animation-out;
+}
+
+@keyframes background-aside-animation-in {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes background-aside-animation-out {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.background-aside-animation-in {
+  animation: 1s ease-out background-aside-animation-in;
+}
+
+.background-aside-animation-out {
+  animation: 1s ease-in background-aside-animation-out;
 }
 
 @keyframes shimmer {
