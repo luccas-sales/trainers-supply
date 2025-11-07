@@ -215,7 +215,7 @@
         scroll-behavior: smooth;
         animation: carousel 20s infinite linear;
 
-        &__product {
+        & .product {
           @include auxiliaries.flex-center(column, center, flex-start, 0);
 
           h3 {
@@ -562,7 +562,7 @@
       grid-template-rows: repeat(2, 1fr);
     }
 
-    &_advantage {
+    & .advantage {
       background-color: base.$color-violet-400;
       padding: 5rem 3rem;
       border-radius: 1rem;

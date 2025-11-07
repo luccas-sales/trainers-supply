@@ -292,7 +292,7 @@
       }
     }
 
-    &__product-temporary {
+    & .product-temporary {
       @include auxiliaries.flex-center(column, center, flex-start, 0);
 
       h3 {

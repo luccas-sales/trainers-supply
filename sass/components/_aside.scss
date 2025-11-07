@@ -225,7 +225,7 @@
         color: rgba(base.$color-violet-950, 0.5);
       }
 
-      &__product {
+      & .product {
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: 25% 1fr;
